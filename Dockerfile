@@ -12,4 +12,4 @@ ADD . $WORKDIR
 RUN npm install -s && ng build --prod
 
 EXPOSE 4200
-ENTRYPOINT ["ng", "serve", "--host", "0.0.0.0"]
+ENTRYPOINT ["ng", "serve", "--host", "0.0.0.0", "--disable-host-check"]
