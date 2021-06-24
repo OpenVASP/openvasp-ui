@@ -9,7 +9,7 @@ WORKDIR $WORKDIR
 
 ADD . $WORKDIR
 
-RUN npm install -s && ng build -c originator
+RUN npm install -s && ng build --prod
 
 EXPOSE 4200
-ENTRYPOINT ["ng", "serve", "--host", "0.0.0.0", "--disable-host-check", "-c", "originator"]
+ENTRYPOINT ["ng", "serve", "--host", "0.0.0.0", "--prod"]
